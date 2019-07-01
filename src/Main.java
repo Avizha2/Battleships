@@ -1,6 +1,10 @@
+import model.Grid;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Grid gameBoard = new Grid();
+        Grid.clearBoard(gameBoard.grid);
+        Grid.displayGrid(gameBoard.grid);
     }
 }

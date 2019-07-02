@@ -20,13 +20,19 @@ public class Grid {
     }
 
     public static void displayGrid(char[][] grid){
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
+        final String ANSI_WHITE = "\u001B[30m";
+        System.out.println();
+        System.out.println("   ----------------");
         for(int i = 0; i < 8; i++){
-            System.out.print(i+1 + " ");
+            System.out.print(i+1 + " |");
             for(int j = 0; j < 8; j++) {
-                System.out.print(grid[i][j]+ " ");
+                System.out.print(ANSI_BLUE_BACKGROUND + ANSI_WHITE + grid[i][j]+ " "+ANSI_RESET);
             }
-            System.out.println();
+            System.out.println("|");
         }
-        System.out.print("  A B C D E F G H");
+        System.out.println("   ----------------");
+        System.out.print("   A B C D E F G H");
     }
 }
